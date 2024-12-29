@@ -1,0 +1,40 @@
+{
+  "name": "taomu-logger",
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist",
+    "types",
+    "lib"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    "types": "./types/index.d.ts",
+    "import": "./dist/index.js"
+  },
+  "scripts": {
+    "pu": "npm run build && npm publish",
+    "dev": "vite",
+    "build": "node scripts/rm-dist.js && tsc -p tsconfig.lib.json",
+    "build:demo": "vite build",
+    "build:docs": "typedoc"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "atomic-cls": "^0.0.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "taomu-ui": "^0.0.19",
+    "typedoc": "^0.27.6",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.6"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
